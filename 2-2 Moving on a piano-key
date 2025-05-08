@@ -1,0 +1,10 @@
+piano = {'d': 1, 'r':2, 'm':3, 'f':4, 's':5, 'l':6, 'c':7}
+key_list = list(input())
+
+current = 'm'
+total_time = 0
+for i in key_list:
+    total_time += abs(piano[current] - piano[i])
+    total_time += 1
+    current = i
+print(total_time)
